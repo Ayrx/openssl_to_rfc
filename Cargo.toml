@@ -1,0 +1,17 @@
+[package]
+name = "openssl_to_rfc"
+description = "Convert OpenSSL cipher suite names into RFC names"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/Ayrx/openssl_to_rfc"
+version = "0.1.0"
+authors = ["Terry Chia <terrycwk1994@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+strum = "0.18.0"
+strum_macros = "0.18.0"
+
+[dev-dependencies]
+openssl = { version = "0.10.29", features = ["vendored"] }
