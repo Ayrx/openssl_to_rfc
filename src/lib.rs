@@ -7,10 +7,10 @@
 //! assert_eq!(cipher, TLSCipherSuite::TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256);
 //! ```
 
-use strum_macros::{Display, EnumIter};
+use strum_macros::{Display, EnumIter, EnumString};
 
 #[allow(non_camel_case_types)]
-#[derive(PartialEq, Debug, Display, EnumIter)]
+#[derive(PartialEq, Debug, Display, EnumIter, EnumString)]
 pub enum SSLV2CipherSuite {
     SSL_CK_RC4_128_WITH_MD5,
     SSL_CK_RC4_128_EXPORT40_WITH_MD5,
@@ -41,7 +41,7 @@ impl SSLV2CipherSuite {
 }
 
 #[allow(non_camel_case_types)]
-#[derive(PartialEq, Debug, Display, EnumIter)]
+#[derive(PartialEq, Debug, Display, EnumIter, EnumString)]
 pub enum TLSCipherSuite {
     TLS_RSA_WITH_NULL_MD5,
     TLS_RSA_WITH_NULL_SHA,
