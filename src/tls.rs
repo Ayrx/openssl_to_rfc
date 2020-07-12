@@ -594,7 +594,7 @@ impl TLSCipherSuite {
         }
     }
 
-    pub fn into_openssl_name(&self) -> String {
+    pub fn as_openssl_name(&self) -> String {
         let s = match self {
             Self::TLS_RSA_WITH_NULL_MD5 => "NULL-MD5",
             Self::TLS_RSA_WITH_NULL_SHA => "NULL-SHA",

@@ -30,7 +30,7 @@ impl SSLV2CipherSuite {
         }
     }
 
-    pub fn into_openssl_name(&self) -> String {
+    pub fn as_openssl_name(&self) -> String {
         let s = match self {
             Self::SSL_CK_RC4_128_WITH_MD5 => "RC4-MD5",
             Self::SSL_CK_RC4_128_EXPORT40_WITH_MD5 => "EXP-RC4-MD5",
