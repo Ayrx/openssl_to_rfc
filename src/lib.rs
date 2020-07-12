@@ -36,7 +36,7 @@ mod tests {
                 return;
             }
 
-            let c = TLSCipherSuite::from_openssl_name(openssl_name).unwrap();
+            let c = TLSCipherSuite::from_openssl_name(&openssl_name).unwrap();
             assert_eq!(c, cipher);
         }
     }
@@ -45,7 +45,7 @@ mod tests {
     fn round_trip_tls_names() {
         for cipher in TLSCipherSuite::iter() {
             let openssl_name = cipher.into_openssl_name();
-            let c = TLSCipherSuite::from_openssl_name(openssl_name).unwrap();
+            let c = TLSCipherSuite::from_openssl_name(&openssl_name).unwrap();
             assert_eq!(c, cipher);
         }
     }
@@ -54,7 +54,7 @@ mod tests {
     fn round_trip_ssl2_names() {
         for cipher in SSLV2CipherSuite::iter() {
             let openssl_name = cipher.into_openssl_name();
-            let c = SSLV2CipherSuite::from_openssl_name(openssl_name).unwrap();
+            let c = SSLV2CipherSuite::from_openssl_name(&openssl_name).unwrap();
             assert_eq!(c, cipher);
         }
     }

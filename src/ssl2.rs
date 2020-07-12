@@ -30,8 +30,8 @@ impl SSLV2CipherSuite {
         }
     }
 
-    pub fn into_openssl_name(&self) -> &str {
-        match *self {
+    pub fn into_openssl_name(&self) -> String {
+        let s = match self {
             Self::SSL_CK_RC4_128_WITH_MD5 => "RC4-MD5",
             Self::SSL_CK_RC4_128_EXPORT40_WITH_MD5 => "EXP-RC4-MD5",
             Self::SSL_CK_RC2_128_CBC_WITH_MD5 => "RC2-CBC-MD5",
@@ -41,6 +41,8 @@ impl SSLV2CipherSuite {
             Self::SSL_CK_DES_192_EDE3_CBC_WITH_MD5 => "DES-CBC3-MD5",
             Self::SSL_CK_RC4_64_WITH_MD5 => "RC4-64-MD5",
             Self::TLS_RSA_WITH_NULL_MD5 => "NULL-MD5",
-        }
+        };
+
+        s.to_owned()
     }
 }

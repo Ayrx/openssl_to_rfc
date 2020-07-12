@@ -594,8 +594,8 @@ impl TLSCipherSuite {
         }
     }
 
-    pub fn into_openssl_name(&self) -> &str {
-        match *self {
+    pub fn into_openssl_name(&self) -> String {
+        let s = match self {
             Self::TLS_RSA_WITH_NULL_MD5 => "NULL-MD5",
             Self::TLS_RSA_WITH_NULL_SHA => "NULL-SHA",
             Self::TLS_RSA_EXPORT_WITH_RC4_40_MD5 => "EXP-RC4-MD5",
@@ -874,6 +874,8 @@ impl TLSCipherSuite {
             Self::TLS_RSA_PSK_WITH_NULL_SHA => "RSA-PSK-NULL-SHA",
             Self::TLS_RSA_PSK_WITH_NULL_SHA256 => "RSA-PSK-NULL-SHA256",
             Self::TLS_RSA_PSK_WITH_NULL_SHA384 => "RSA-PSK-NULL-SHA384",
-        }
+        };
+
+        s.to_owned()
     }
 }
