@@ -3,7 +3,7 @@ name = "openssl_to_rfc"
 description = "Convert OpenSSL cipher suite names into RFC names"
 license = "MIT OR Apache-2.0"
 repository = "https://github.com/Ayrx/openssl_to_rfc"
-version = "0.2.0"
+version = "0.3.0"
 authors = ["Terry Chia <terrycwk1994@gmail.com>"]
 edition = "2018"
 
