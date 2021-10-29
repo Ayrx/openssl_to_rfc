@@ -10,8 +10,8 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-strum = "0.18.0"
-strum_macros = "0.18.0"
+strum = "0.22.0"
+strum_macros = "0.22.0"
 
 [dev-dependencies]
-openssl = { version = "0.10.29", features = ["vendored"] }
+openssl = { version = "0.10.37", features = ["vendored"] }
